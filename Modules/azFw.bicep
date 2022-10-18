@@ -46,15 +46,15 @@ param natRuleCollections array = []
 
 param logAnalyticsWorkspaceId string = ''
 
-param diagnosticStorageAccountId string = ''
+param diagnosticStorageAccountId string = '/subscriptions/2348f252-5d66-4ed8-b6b3-86b9a5825ba7/resourceGroups/demo-sytac-2022/providers/Microsoft.Storage/storageAccounts/diagazfwdemo'
 
-param enableDiagnostics bool
+param enableDiagnostics bool = false
 
 param isSecuredHubFirewall bool = false
 
 param firewallPolicyId string = ''
 
-param hubId string
+param hubId string = ''
 
 var azureFirewallSubnetId = '${subscription().id}/resourceGroups/${resourceGroup().name}/providers/Microsoft.Network/virtualNetworks/${vnetName}/subnets/${subnetName}'
 
